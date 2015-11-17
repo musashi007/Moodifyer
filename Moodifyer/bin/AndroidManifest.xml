@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.moodifyer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />    
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/mood_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/SampleTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+        <activity android:name=".WindowSample" >
+        </activity>
+        <activity
+            android:name=".HomePageActivity"
+            android:label="@string/title_activity_home_page" >
+           
+        </activity>
+        <activity
+            android:name=".LoginPage"
+            android:label="@string/title_activity_login_page" >
+        </activity>
+        <activity
+            android:name=".SignUpPage"
+            android:label="@string/title_activity_sign_up_page" >
+        </activity>
+        <activity
+            android:name=".drawers.HomeFragment"
+            android:label="@string/title_activity_home_fragment" >
+        </activity>
+        <activity
+            android:name=".drawers.PlaylistFragment"
+            android:label="@string/title_activity_playlist_fragment" >
+        </activity>
+        <activity
+            android:name=".drawers.ProfileFragment"
+            android:label="@string/title_activity_profile_fragment" >
+        </activity>
+        <activity
+            android:name=".drawers.BrowseFragment"
+            android:label="@string/title_activity_browse_fragment" >
+        </activity>
+        <activity
+            android:name=".drawers.LogoutFragment"
+            android:label="@string/title_activity_logout_fragment" >
+        </activity>
+        <activity
+            android:name=".drawers.GridMoodFragment"
+            android:label="@string/title_activity_weeklytoptracks_fragment" >
+        </activity>
+
+        <service
+            android:name=".services.StreamSongService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.example.moodifyer.services.action.PLAY" />
+                <action android:name="com.example.moodifyer.services.action.PAUSE" />
+                <action android:name="com.example.moodifyer.services.action.PLAYPAUSE" />
+                <action android:name="com.example.moodifyer.services.action.PLAYPAUSEBROWSE" />
+                <action android:name="com.example.moodifyer.services.action.MOODLIST" />
+                <action android:name="com.example.moodifyer.services.action.LOGOUTSTOP" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ListmoodActivity"
+            android:label="What&apos;s your mood?" >
+
+            <!-- android:theme="@android:style/Theme.Dialog" > -->
+        </activity>
+    </application>
+
+</manifest>

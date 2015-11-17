@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/finalbg"
+    android:scaleType="fitXY" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scaleType="fitXY" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:id="@+id/profile"
+                    style="@style/MenuDrawer.Widget.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginLeft="-5dp"
+                    android:src="@drawable/profile"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/profName"
+                    style="@style/MenuDrawer.Widget.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="36dp"
+                    android:background="#90000000"
+                    android:text="" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item1"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/home"
+            android:text="Home" />
+
+        <TextView
+            android:id="@+id/item2"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/browse"
+            android:text="Browse" />
+
+        <TextView
+            android:id="@+id/item3"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/profile"
+            android:text="Profile" />
+
+
+        <TextView
+            android:id="@+id/item4"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/logout"
+            android:gravity="bottom"
+            android:text="Log out" />
+    </LinearLayout>
+
+</ScrollView>

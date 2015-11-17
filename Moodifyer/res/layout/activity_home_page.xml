@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:seekarc="http://schemas.android.com/apk/res/com.example.moodifyer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:dragView="@+id/dragView"
+    sothree:panelHeight="68dp"
+    sothree:paralaxOffset="100dp"
+    sothree:shadowHeight="4dp" >
+
+    <!-- MAIN CONTENT -->
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <!-- SLIDING LAYOUT -->
+
+    <LinearLayout
+        android:id="@+id/hideSliding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <com.example.moodifyer.util.SquareImageView
+                android:id="@+id/imgcoverphoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cdtwo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/songtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/emptytitle"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/artistname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/emptyartist"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="68dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/emptyduration"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp" >
+
+                    <Button
+                        android:id="@+id/followme"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/pause"
+                        android:gravity="center_vertical|right"
+                        android:src="@drawable/pause"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/follow"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/play"
+                        android:gravity="center_vertical|right"
+                        android:src="@drawable/play"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dragViewtwo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/songtitletwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/emptytitle"
+                    android:textSize="46sp" />
+
+                <TextView
+                    android:id="@+id/artistnametwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="#90000000"
+                    android:gravity="center_vertical"
+                    android:text="@string/emptyartist"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/durationtwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#90000000"
+                android:gravity="center"
+                android:text="@string/emptyduration"
+                android:textSize="46sp" />
+
+            <RelativeLayout
+                android:id="@+id/tile"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="60dp"
+                    android:src="@drawable/cdtwo" />
+
+                <com.triggertrap.seekarc.SeekArc
+                    android:id="@+id/seekArc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="120dp"
+                    seekarc:arcColor="@color/white"
+                    seekarc:clockwise="true"
+                    seekarc:progressColor="@color/purple"
+                    seekarc:rotation="180"
+                    seekarc:startAngle="30"
+                    seekarc:sweepAngle="300"
+                    seekarc:thumb="@drawable/custom_seek_arc_control_selector"
+                    seekarc:touchInside="false" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:scaleType="fitXY" >
+
+                    <Button
+                        android:id="@+id/previous"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/previous"
+                        android:gravity="center_horizontal|left"
+                        android:paddingLeft="60dp"
+                        android:src="@drawable/previous"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/next"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/next"
+                        android:gravity="center_horizontal|right"
+                        android:paddingRight="60dp"
+                        android:src="@drawable/next"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/pausetwo"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/pause"
+                        android:gravity="center"
+                        android:src="@drawable/pause"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/playtwo"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/play"
+                        android:gravity="center"
+                        android:src="@drawable/play"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

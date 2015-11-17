@@ -1,0 +1,92 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/finalbg"
+    tools:context="com.example.moodifyer.SignUpPage" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/emailSignUp"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="@string/Email"
+            android:inputType="textEmailAddress"
+            android:textColor="#000" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/usernameSignUp"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/chooseusername"
+            android:inputType="textPersonName"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/passwordSignUp"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/choosepassword"
+            android:inputType="textPassword"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/confirm_passwordSignUp"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/confirmpassword"
+            android:inputType="textPassword"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/ageSignUp"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dob"
+            android:textColor="#fff" 
+            android:background="@drawable/border_white"
+            android:layout_margin="10dp"/>
+
+        <Switch
+            android:id="@+id/genderSignUp"
+            style="@style/MenuDrawer.Widget.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textOff="Male"
+            android:textOn="Female" />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_white"
+            android:gravity="center"
+            android:padding="15sp"
+            android:text="@string/signup"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+</ScrollView>

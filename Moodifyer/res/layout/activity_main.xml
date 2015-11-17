@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/finalbg"
+    android:scaleType="fitXY"
+    tools:context="com.example.moodifyer.MainActivity" >
+
+    <TextView
+        android:id="@+id/moodifyer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:gravity="center_vertical"
+        android:text="moodifyer"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#fff"
+        android:textSize="60sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/border_white"
+            android:gravity="center"
+            android:padding="10sp"
+            android:scaleType="fitXY"
+            android:text="LOG IN"
+            android:textColor="#fff" 
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/border_white"
+            android:gravity="center"
+            android:padding="10sp"
+            android:scaleType="fitXY"
+            android:text="SIGN UP"
+            android:textColor="#fff" 
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
